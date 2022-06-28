@@ -1,0 +1,23 @@
+:root{
+    --color_bg:#fff;
+    --color_card:#000;
+    --color_text:#fff;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color_bg);
+}
+.card{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+    left: calc( 50% - 200px );
+    top: calc( 50vh - 200px);
+    border-radius: 15px;
+    background-color: var(--color_card);
+}
