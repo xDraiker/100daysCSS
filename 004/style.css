@@ -1,0 +1,84 @@
+:root{
+    --color_bg:#fff;
+    --color_card:#ff5f5f;
+    --color_text:#fff;
+    --cubic: cubic-bezier(.17,.03,.92,.75);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color_bg);
+}
+.card{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+    left: calc( 50% - 200px );
+    top: calc( 50vh - 200px);
+    border-radius: 15px;
+    background-color: var(--color_card);
+}
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 8px 8px 20px -8px #3a3a3a;
+    background-color: var(--color_text);
+}
+.circle__bottom{
+    height: 35%;
+    width: 35%;
+    top: 32.5%;
+    left: 32.5%;
+    animation: circle-bot 4s var(--cubic) infinite;
+}
+.circle__center{
+    height: 25%;
+    width: 25%;
+    top: 37.5%;
+    left: 37.5%;
+    animation: circle-cen 4s var(--cubic) infinite;
+}
+.circle__top{
+    height: 15%;
+    width: 15%;
+    top: 42.5%;
+    left: 42.5%;
+    animation: circle-top 4s var(--cubic) infinite;
+}
+@keyframes circle-bot {
+    0%{
+        transform: scale(0);
+    }
+    25%,80%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+@keyframes circle-cen {
+    0%,15%{
+        transform: scale(0);
+    }
+    35%,70%{
+        transform: scale(1);
+    }
+    90%,100%{
+        transform: scale(0);
+    }
+}
+@keyframes circle-top {
+    0%,30%{
+        transform: scale(0);
+    }
+    50%,60%{
+        transform: scale(1);
+    }
+    85%,100%{
+        transform: scale(0);
+    }
+}
