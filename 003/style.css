@@ -1,0 +1,137 @@
+:root{
+    --color_card:#383838;
+    --color_environment:#a0e9ff;
+    --color_pyramid:#fff;
+    --color_sand:#fffd76;
+    --cubic:cubic-bezier(.43,.61,.39,-0.17);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color_bg);
+}
+.card{
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+    left: calc( 50% - 200px );
+    top: calc( 50vh - 200px);
+    border-radius: 15px;
+    background-color: var(--color_card);
+}
+.environment{
+    position: absolute;
+    overflow: hidden;
+    height: 50%;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+}
+.environment-day{
+    border-radius: 50%;
+    background-color: var(--color_environment);
+}
+.sun{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    top: 40%;
+    left: -15px;
+    border-radius: 50%;
+    background-color: #fffc33;
+    animation: sun 5s var(--cubic) infinite;
+}
+.sand{
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    bottom: 0px;
+    background-color: var(--color_sand);
+}
+.pyramid,
+.shadow-top{
+    position: absolute;
+    height: 60px;
+    width: 120px;
+    bottom: 35%;
+    left: calc( 50% - 60px );
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: var(--color_pyramid);
+    animation: pyramid 5s var(--cubic) infinite;
+}
+.shadow-top{
+    clip-path: polygon(50% 0%, 60% 100%, 100% 100%);
+    background-color: #ccc;
+    animation: shadow-top 5s var(--cubic) infinite;
+}
+.shadow-bottom{
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: calc( 35% - 40px );
+    clip-path: polygon(80% 0, 20% 0, 150% 100%);
+    background-color: #9e9e9e;
+    animation: shadow-bottom 5s var(--cubic) infinite;
+}
+.environment-night{
+    animation: night 5s var(--cubic) infinite;
+}
+@keyframes sun {
+    0%, 10%{
+        transform-origin: 115px 50px;
+        transform: rotate(-10deg);
+    }
+    95%{
+        transform-origin: 115px 50px;
+        transform: rotate(160deg);
+    }
+    95%, 100%{
+        transform-origin: 115px 50px;
+        transform: rotate(160deg);
+    }
+}
+@keyframes pyramid {
+    0%,15%{
+        background-color: #ccc;
+    }
+    15%,85%{
+        background-color:var(--color_pyramid);
+    }
+    85%, 100%{
+        background-color: #ccc;
+    }
+}
+@keyframes shadow-top {
+    0%,15%{
+        background-color: var(--color_pyramid);
+    }
+    15%,85%{
+        background-color:#ccc;
+    }
+    85%, 100%{
+        background-color: var(--color_pyramid);
+    }
+}
+@keyframes shadow-bottom {
+    0%,15%{
+        clip-path: polygon(80% 0, 20% 0, 150% 100%);
+    }
+    85%, 100%{
+        clip-path: polygon(80% 0, 20% 0, -50% 100%);
+    }
+}
+@keyframes night {
+    0%, 20%{
+        background-color: var(--color_card);
+    }
+    20%,85%{
+        background-color: #ffffff00;
+    }
+    90%,100%{
+        background-color: var(--color_card);
+    }
+}
