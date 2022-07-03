@@ -107,39 +107,30 @@ body{
     position: absolute;
     height: 10px;
     width: 10px;
-    z-index: 100;
     border-radius: 50%;
     cursor:pointer;
+}
+.point__red{
+    z-index: 50;
+    background-color: #ff6347;
+}
+.point__blue{
+    z-index: 100;
+    background-color: #00bbbb;
 }
 .sign{
     position: absolute;
     display: inline-block;
     height: 1.rem;
     width: 2.4rem;
-    color: #00000044;
+    color: #00000000;
     padding: .2rem;
     text-align: center;
     clip-path: polygon(100% 0, 100% 85%, 60% 85%, 50% 100%, 40% 85%, 0 85%, 0 0);
-    background-color: #0000004b;
+    background-color: #00000000;
 }
-.point__red{
-    background-color: #ff6347;
-}
-.point__blue{
-    background-color: #00bbbb;
-}
-.point:hover+.sign{
-    transform: translateY(-12px);
-    color: #fff;
-    transition: all .8s;
-}
-.point__red:hover+.sign{
-    background-color: #ff6347;
-    transition: all .8s;
-}
-.point__blue:hover+.sign{
-    background-color: #00bbbb;
-    transition: all .8s;
+.sign__blue{
+    z-index: 75;
 }
 .point__red-1{
     top: 63px;
@@ -189,6 +180,14 @@ body{
     top: 42px;
     left: 215.5px;
 }
+.point__red-7{
+    top: 45px;
+    left: 274px;
+}
+.sign__red-7{
+    top: 32px;
+    left: 260px;
+}
 .point__blue-1{
     top: 108px;
     left: 16px;
@@ -196,6 +195,54 @@ body{
 .sign__blue-1{
     top: 95px;
     left: 2px;
+}
+.point__blue-2{
+    top: 100.5px;
+    left: 58px;
+}
+.sign__blue-2{
+    top: 87.5px;
+    left: 44px;
+}
+.point__blue-3{
+    top: 115.5px;
+    left: 101px;
+}
+.sign__blue-3{
+    top: 102.5px;
+    left: 87px;
+}
+.point__blue-4{
+    top: 89.5px;
+    left: 144px;
+}
+.sign__blue-4{
+    top: 76.5px;
+    left: 130px;
+}
+.point__blue-5{
+    top: 110px;
+    left: 187px;
+}
+.sign__blue-5{
+    top: 97px;
+    left: 173px;
+}
+.point__blue-6{
+    top: 105px;
+    left: 230px;
+}
+.sign__blue-6{
+    top: 92px;
+    left: 215.5px;
+}
+.point__blue-7{
+    top: 90px;
+    left: 274px;
+}
+.sign__blue-7{
+    top: 77px;
+    left: 260px;
 }
 .week{
     position: absolute;
@@ -209,4 +256,17 @@ body{
 .day{
     margin: 0;
     font-size: .75rem;
+}
+.point:hover+.sign{
+    transform: translateY(-12px);
+    color: #fff;
+    transition: all .8s;
+}
+.point__red:hover+.sign{
+    background-color: #ff6347;
+    transition: all .8s;
+}
+.point__blue:hover+.sign{
+    background-color: #00bbbb;
+    transition: all .8s;
 }
