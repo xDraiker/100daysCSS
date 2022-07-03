@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>005</title>
+</head>
+<body>
+    <section class="card">
+        <div class="graph">
+            <div class="graph__header">
+                <h1 class="text text__title">WEEKLY REPORT</h1>
+                <p class="text text__subtitle">Revenue</p>
+                <p class="text text__date">01. Feb - 07. Feb</p>
+                <p class="text text__money">$ 3621.79</p>
+            </div>
+            <div class="graph__main">
+                <p class="label label__red">Views</p>
+                <p class="label label__blue">Purchases</p>
+                <svg height="90" width="260" class="graph__line">
+                    <line x1="0" y1="45" x2="260" y2="45" style="stroke:#e4e4e4;stroke-width:1"/>
+                    <line x1="43" y1="0" x2="43" y2="90" style="stroke:#e4e4e4;stroke-width:1"/>
+                    <line x1="86" y1="0" x2="86" y2="90" style="stroke:#e4e4e4;stroke-width:1"/>
+                    <line x1="129" y1="0" x2="129" y2="90" style="stroke:#e4e4e4;stroke-width:1"/>
+                    <line x1="172" y1="0" x2="172" y2="90" style="stroke:#e4e4e4;stroke-width:1"/>
+                    <line x1="215" y1="0" x2="215" y2="90" style="stroke:#e4e4e4;stroke-width:1"/>
+                    <polyline points="0,22.5 43,15 86,25 129,20 172,10 215,15 260,5" style="fill:none;stroke:#ff6347;stroke-width:3" />
+                    <polyline points="0,67.5 43,60 86,75 129,50 172,70 215,65 260,50" style="fill:none;stroke:#00bbbb;stroke-width:3" />
+                </svg>
+                <div class="point point__red point__red-1"></div>
+                <span class="sign sign__red sign__red-1">22</span>
+                <div class="point point__red point__red-2"></div>
+                <span class="sign sign__red sign__red-2">15</span>
+                <div class="point point__red point__red-3"></div>
+                <span class="sign sign__red sign__red-3">20</span>
+                <div class="point point__red point__red-4"></div>
+                <span class="sign sign__red sign__red-4">25</span>
+                <div class="point point__red point__red-5"></div>
+                <span class="sign sign__red sign__red-5">22</span>
+                <div class="point point__red point__red-6"></div>
+                <span class="sign sign__red sign__red-6">15</span>
+                <div class="point point__red point__red-7"></div>
+                <span class="sign sign__red sign__red-7">20</span>
+
+                <div class="point point__blue point__blue-1"></div>
+                <span class="sign sign__blue sign__blue-1">67</span>
+                <div class="week">
+                    <p class="day">MON</p>
+                    <p class="day">TUE</p>
+                    <p class="day">WED</p>
+                    <p class="day">THU</p>
+                    <p class="day">FRE</p>
+                    <p class="day">SAT</p>
+                    <p class="day">SUN</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
